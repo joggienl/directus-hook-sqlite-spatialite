@@ -1,0 +1,39 @@
+{
+	"name": "directus-hook-sqlite-spatialite",
+	"description": "A simple Directus hook to load the SpatialLite extension into SQLite on each connection",
+	"icon": "extension",
+	"version": "1.0.0",
+	"license": "MIT",
+	"author": {
+		"email": "jogchum@clevercactus.dev",
+		"name": "Jogchum Koerts"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/joggienl/directus-hook-sqlite-spatialite.git"
+	},
+	"keywords": [
+		"directus",
+		"directus-extension",
+		"directus-extension-hook"
+	],
+	"type": "module",
+	"files": [
+		"dist",
+		"docs"
+	],
+	"directus:extension": {
+		"type": "hook",
+		"path": "dist/index.js",
+		"source": "src/index.js",
+		"host": "^10.10.0"
+	},
+	"scripts": {
+		"build": "directus-extension build",
+		"dev": "directus-extension build -w --no-minify",
+		"link": "directus-extension link"
+	},
+	"devDependencies": {
+		"@directus/extensions-sdk": "11.0.7"
+	}
+}

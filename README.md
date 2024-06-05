@@ -4,7 +4,7 @@ If you want to use GEO functions inside directus and are using SQLite as your
 database backend, you need the [SpatiaLite](https://www.gaia-gis.it/fossil/libspatialite/index) 
 extension for SQLite.
 
-![screenshot](https://raw.githubusercontent.com/joggienl/directus-hook-sqlite-spatialite/v1.0.0/docs/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/joggienl/directus-hook-sqlite-spatialite/v1.0.1/docs/screenshot.jpg)
 
 This Directus extension will load the module into the database (it will add it
 to every connection, that is the way how it works for SQLite).
@@ -22,7 +22,7 @@ FROM directus/directus:10.12.0
 
 USER root
 RUN <<EOF
-  apk --no-cache add libspatialite sqlite
+  apk --no-cache add libspatialite
   ln -s mod_spatialite.so.8 /usr/lib/mod_spatialite
 EOF
 USER node

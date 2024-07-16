@@ -30,7 +30,9 @@
 	},
 	"scripts": {
 		"build": "directus-extension build",
-		"dev": "directus-extension build -w --no-minify"
+		"predev": "mkdir -p ./directus/data/extensions/directus-hook-sqlite-spatialite && cp package.json ./directus/data/extensions/directus-hook-sqlite-spatialite",
+		"dev": "directus-extension build -w --no-minify -i ./src/index.js -t hook -o ./directus/data/extensions/directus-hook-sqlite-spatialite/dist/index.js"
+
 	},
 	"devDependencies": {
 		"@directus/extensions-sdk": "11.0.9"

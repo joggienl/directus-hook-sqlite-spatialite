@@ -10,19 +10,22 @@ SQLite.
 This Directus extension will load the module into the database (it will add it
 to every connection, that is the way how it works for SQLite).
 
-If used in conjunction with the `directus-hook-sqlite-perf` extension, it is
-possible that if you have more connections in your database pool, loading of the
-spatialite extension happens a little to late. If this happens you'll get an
-error. Most of the time it will work when you retry saving.
-
-If this is an issue: set `DB_POOL__MAX` to 1!
+> [!WARNING]  
+> If used in conjunction with the
+> [directus-hook-sqlite-perf](https://github.com/joggienl/directus-hook-sqlite-perf)
+> extension, it is possible that if you have more connections in your database
+> pool, loading of the spatialite extension happens a little to late. If this
+> happens you'll get an error. Most of the time it will work when you retry
+> saving.
+>
+> If this is an issue: set `DB_POOL__MAX` to 1!
 
 Note that your Directus backend will need the library to be installed. If you
 are using the official docker image you can easily build your own image with the
 library included.
 
 ```Dockerfile
-FROM directus/directus:10.12.0
+FROM directus/directus:11.0.2
 
 ## Install SQLite SpatiaLite: extend the SQLite core to support fully fledged Spatial SQL
 ## capabilities.

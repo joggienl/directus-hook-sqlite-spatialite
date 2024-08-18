@@ -5,7 +5,7 @@ database backend, you need the
 [SpatiaLite](https://www.gaia-gis.it/fossil/libspatialite/index) extension for
 SQLite.
 
-![screenshot](https://raw.githubusercontent.com/joggienl/directus-hook-sqlite-spatialite/v1.1.0/docs/screenshot.jpg)
+![screenshot](https://raw.githubusercontent.com/joggienl/directus-hook-sqlite-spatialite/v1.1.1/docs/screenshot.jpg)
 
 This Directus extension will load the module into the database (it will add it
 to every connection, that is the way how it works for SQLite).
